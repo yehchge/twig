@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+    </head>
+    <body>
+		{# 這是一份說明註解 #}
+        <ul id="navigation">
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h1>My Webpage</h1>
+        {{ a_variable }}
+		
+		<table>
+		  <tr>
+		    <td>
+			{ABCDEFG}
+			</td>
+		  </tr>
+		  <tr>
+		    <td>
+			{% verbatim %}
+			<div>HIJK{{</div>
+			 <ul>
+			{% for item in seq %}
+				<li>{{ item }}</li>
+			{% endfor %}
+			</ul>
+			{% endverbatim %}
+			</td>
+		  </tr>
+		  <tr>
+		    <td>
+			LMNOPQ
+			</td>
+		  </tr>
+		</table>
+    </body>
+</html>
